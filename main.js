@@ -21,6 +21,7 @@ const game = {
   board: [],
   turn: "",
   winner: "",
+  message: "",
 };
 
 /*----- cached elements  -----*/
@@ -36,6 +37,8 @@ const cellNine = document.querySelector("cell-nine");
 
 const startGame = document.querySelector("#startGame");
 const resetGame = document.querySelector("#resetGame");
+
+const gameMessage = document.querySelector("#gameMessage");
 
 /*----- event listeners (Logic) -----*/
 startGame.addEventListener("click", initialise);
@@ -59,9 +62,11 @@ function initialise() {
     cellNine: null,
   };
 
-  game.turn = colors.player1;
+  game.turn = "Player 1";
 
   game.winner = null;
+
+  gameMessage.innerText = `It is ${game.turn}'s turn.`;
 
   return;
 }
