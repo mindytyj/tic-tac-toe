@@ -45,7 +45,16 @@ startGame.addEventListener("click", initialise);
 resetGame.addEventListener("click", main);
 
 /*----- render functions (No logic) -----*/
-function render() {}
+function render() {
+  renderBoard();
+}
+
+function renderBoard() {
+  game.board.forEach(function (cell, index) {
+    const currentCell = document.getElementById(`cell-${index}`);
+    currentCell.style.backgroundColor = colors[cell];
+  });
+}
 
 /*----- functions -----*/
 
