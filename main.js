@@ -34,12 +34,38 @@ const cellSeven = document.querySelector("#cell-seven");
 const cellEight = document.querySelector("#cell-eight");
 const cellNine = document.querySelector("cell-nine");
 
+const startGame = document.querySelector("#startGame");
+const resetGame = document.querySelector("#resetGame");
+
 /*----- event listeners (Logic) -----*/
+startGame.addEventListener("click", initialise);
+resetGame.addEventListener("click", main);
 
 /*----- render functions (No logic) -----*/
 function render() {}
 
 /*----- functions -----*/
+
+function initialise() {
+  game.board = {
+    cellOne: null,
+    cellTwo: null,
+    cellThree: null,
+    cellFour: null,
+    cellFive: null,
+    cellSix: null,
+    cellSeven: null,
+    cellEight: null,
+    cellNine: null,
+  };
+
+  game.turn = colors.player1;
+
+  game.winner = null;
+
+  return;
+}
+
 function main() {
   render();
 }
