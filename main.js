@@ -17,6 +17,11 @@ const winningCombinations = [
 ];
 
 /*----- state variables -----*/
+const game = {
+  board: [],
+  turn: "",
+  winner: "",
+};
 
 /*----- cached elements  -----*/
 
