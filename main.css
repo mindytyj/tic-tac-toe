@@ -20,13 +20,13 @@ div {
   text-align: center;
   justify-content: center;
   margin: 20px;
+  border: 5px solid;
 }
 
 .grid-item {
   color: aqua;
   font-size: xx-large;
   background-color: gray;
-  border-color: black;
   text-align: center;
   justify-content: space-evenly;
   font-size: xx-large;
