@@ -24,6 +24,15 @@ const game = {
 };
 
 /*----- cached elements  -----*/
+const cellOne = document.querySelector("#cell-one");
+const cellTwo = document.querySelector("#cell-two");
+const cellThree = document.querySelector("#cell-three");
+const cellFour = document.querySelector("#cell-four");
+const cellFive = document.querySelector("#cell-five");
+const cellSix = document.querySelector("#cell-six");
+const cellSeven = document.querySelector("#cell-seven");
+const cellEight = document.querySelector("#cell-eight");
+const cellNine = document.querySelector("cell-nine");
 
 /*----- event listeners (Logic) -----*/
 
