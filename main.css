@@ -1,0 +1,48 @@
+body {
+  background-color: lightsteelblue;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+div {
+  margin: 20px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
+  gap: 10px;
+  text-align: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.grid-item {
+  color: aqua;
+  font-size: xx-large;
+  background-color: gray;
+  border-color: black;
+  text-align: center;
+  justify-content: space-evenly;
+  font-size: xx-large;
+  padding: 60px;
+}
+
+.output-container {
+  background-color: azure;
+  text-align: center;
+  margin: 10px 100px 10px 100px;
+  padding: 10px;
+}
+
+button {
+  padding: 5px;
+  text-align: center;
+  inline-size: 100px;
+  justify-content: center;
+}
