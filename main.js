@@ -52,6 +52,16 @@ function renderMessage() {
 
 /*----- functions -----*/
 
+function initialise() {
+  board = [null, null, null, null, null, null, null, null, null];
+
+  turn = "Player X";
+
+  winner = null;
+
+  render();
+}
+
 function winnerMessage() {
   if (winner !== null) {
     message = `It is now ${turn.toUpperCase()}'s turn!`;
@@ -68,6 +78,7 @@ function winnerMessage() {
 }
 
 function main() {
+  initialise();
   render();
 }
 
