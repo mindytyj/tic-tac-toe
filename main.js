@@ -17,31 +17,20 @@ const winningCombinations = [
 ];
 
 /*----- state variables -----*/
-const game = {
-  board: [],
-  turn: "",
-  winner: "",
-  message: "",
-};
+let board = [];
+let turn = "";
+let winner = "";
+let message = "";
 
 /*----- cached elements  -----*/
-const cellOne = document.querySelector("#cell-one");
-const cellTwo = document.querySelector("#cell-two");
-const cellThree = document.querySelector("#cell-three");
-const cellFour = document.querySelector("#cell-four");
-const cellFive = document.querySelector("#cell-five");
-const cellSix = document.querySelector("#cell-six");
-const cellSeven = document.querySelector("#cell-seven");
-const cellEight = document.querySelector("#cell-eight");
-const cellNine = document.querySelector("cell-nine");
+const gameBoard = document.querySelector(".grid");
+const gameCells = document.querySelectorAll(".grid-item");
 
-const startGame = document.querySelector("#startGame");
 const resetGame = document.querySelector("#resetGame");
 
 const gameMessage = document.querySelector("#gameMessage");
 
 /*----- event listeners (Logic) -----*/
-startGame.addEventListener("click", initialise);
 resetGame.addEventListener("click", main);
 
 /*----- render functions (No logic) -----*/
@@ -50,35 +39,13 @@ function render() {
 }
 
 function renderBoard() {
-  game.board.forEach(function (cell, index) {
+  board.forEach(function (cell, index) {
     const currentCell = document.getElementById(`cell-${index}`);
     currentCell.style.backgroundColor = colors[cell];
   });
 }
 
 /*----- functions -----*/
-
-function initialise() {
-  game.board = {
-    cellOne: null,
-    cellTwo: null,
-    cellThree: null,
-    cellFour: null,
-    cellFive: null,
-    cellSix: null,
-    cellSeven: null,
-    cellEight: null,
-    cellNine: null,
-  };
-
-  game.turn = "Player 1";
-
-  game.winner = null;
-
-  gameMessage.innerText = `It is ${game.turn}'s turn.`;
-
-  return;
-}
 
 function main() {
   render();
