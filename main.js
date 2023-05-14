@@ -31,6 +31,19 @@ const resetGame = document.querySelector("#resetGame");
 const gameMessage = document.querySelector("#gameMessage");
 
 /*----- event listeners (Logic) -----*/
+gameBoard.addEventListener("click", function (evt) {
+  gameCells.forEach(function (square, index) {
+    const cell = document.getElementById(`cell-${index}`);
+    if (cell === evt.target) {
+      if (turn === "Player X") {
+        square.innerText = "X";
+      } else if (turn === "Player O") {
+        square.innerText = "O";
+      }
+    }
+  });
+});
+
 resetGame.addEventListener("click", main);
 
 /*----- render functions (No logic) -----*/
