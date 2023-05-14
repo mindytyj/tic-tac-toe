@@ -36,6 +36,7 @@ resetGame.addEventListener("click", main);
 /*----- render functions (No logic) -----*/
 function render() {
   renderBoard();
+  renderMessage();
 }
 
 function renderBoard() {
@@ -45,7 +46,26 @@ function renderBoard() {
   });
 }
 
+function renderMessage() {
+  gameMessage.innerText = message;
+}
+
 /*----- functions -----*/
+
+function winnerMessage() {
+  if (winner !== null) {
+    message = `It is now ${turn.toUpperCase()}'s turn!`;
+  }
+
+  if (winner === "T") {
+    message = "It's a tie!";
+  } else if (winner === "Player X") {
+    message = `Congratulations, ${turn.toUpperCase()}! You have won!`;
+  } else if (winner === "Player O") {
+    message = `Congratulations, ${turn.toUpperCase()}! You have won!`;
+  }
+  render();
+}
 
 function main() {
   render();
